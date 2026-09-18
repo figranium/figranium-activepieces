@@ -5,7 +5,9 @@
   "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf dist",
     "build": "tsc -p tsconfig.json",
@@ -17,12 +19,17 @@
     "url": "git+https://github.com/figranium/figranium-activepieces.git"
   },
   "homepage": "https://github.com/figranium/figranium-activepieces#readme",
-  "bugs": {"url": "https://github.com/figranium/figranium-activepieces/issues"},
+  "bugs": {
+    "url": "https://github.com/figranium/figranium-activepieces/issues"
+  },
   "license": "MIT",
-  "publishConfig": {"access": "public"},
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@activepieces/pieces-common": "latest",
-    "@activepieces/pieces-framework": "latest"
+    "@activepieces/pieces-framework": "latest",
+    "@activepieces/shared": "latest"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
