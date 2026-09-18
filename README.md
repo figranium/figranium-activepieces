@@ -1,4 +1,4 @@
-# @activepieces/figranium
+# @figranium/piece
 
 Official Activepieces piece for integrating Figranium browser automation into workflows.
 
