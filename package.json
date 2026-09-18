@@ -1,0 +1,32 @@
+{
+  "name": "@activepieces/figranium",
+  "version": "0.0.1",
+  "description": "Official Activepieces piece for integrating Figranium browser automation into workflows.",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint 'src/**/*.ts'",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figranium/figranium-activepieces.git"
+  },
+  "homepage": "https://github.com/figranium/figranium-activepieces#readme",
+  "bugs": {"url": "https://github.com/figranium/figranium-activepieces/issues"},
+  "license": "MIT",
+  "publishConfig": {"access": "public"},
+  "dependencies": {
+    "@activepieces/pieces-common": "latest",
+    "@activepieces/pieces-framework": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.7.0"
+  }
+}
