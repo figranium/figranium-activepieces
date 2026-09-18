@@ -1,4 +1,5 @@
-import { createPiece, PieceCategory } from '@activepieces/pieces-framework';
+import { createPiece } from '@activepieces/pieces-framework';
+import { PieceCategory } from '@activepieces/shared';
 import { createCustomApiCallAction } from '@activepieces/pieces-common';
 import { figraniumAuth } from './lib/auth';
 import { executeTaskAction } from './lib/actions/execute-task';
