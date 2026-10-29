@@ -5,16 +5,10 @@ import { figraniumAuth } from './lib/auth';
 import { executeTaskAction } from './lib/actions/execute-task';
 import { listTasksAction } from './lib/actions/list-tasks';
 import { listExecutionsAction } from './lib/actions/list-executions';
-import { listSchedulesAction } from './lib/actions/list-schedules';
-import { getScheduleStatusAction } from './lib/actions/get-schedule-status';
-import { getSchedulerStatusAction } from './lib/actions/get-scheduler-status';
-import { setScheduleAction } from './lib/actions/set-schedule';
-import { deleteScheduleAction } from './lib/actions/delete-schedule';
-import { describeScheduleAction } from './lib/actions/describe-schedule';
 
 export const figranium = createPiece({
   displayName: 'Figranium',
-  description: 'Interact with Figranium — trigger browser-automation tasks, inspect executions, and manage schedules.',
+  description: 'Run Figranium Tasks and inspect permitted executions with a scoped API key.',
   auth: figraniumAuth,
   minimumSupportedRelease: '0.36.1',
   logoUrl:
@@ -25,12 +19,6 @@ export const figranium = createPiece({
     executeTaskAction,
     listTasksAction,
     listExecutionsAction,
-    listSchedulesAction,
-    getScheduleStatusAction,
-    getSchedulerStatusAction,
-    setScheduleAction,
-    deleteScheduleAction,
-    describeScheduleAction,
     createCustomApiCallAction({
       auth: figraniumAuth,
       baseUrl: (auth) => (auth ? auth.props.baseUrl : ''),
