@@ -30,7 +30,6 @@ const safeCustomApiCallAction = createAction({
   requireAuth: baseCustomApiCallAction.requireAuth,
   errorHandlingOptions: baseCustomApiCallAction.errorHandlingOptions,
   audience: 'human',
-  classification: 'WRITE',
   run: async (context) => baseCustomApiCallAction.run({
     ...context,
     propsValue: { ...context.propsValue, followRedirects: context.propsValue.followRedirects ?? false },
