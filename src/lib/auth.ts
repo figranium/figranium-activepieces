@@ -8,9 +8,9 @@ export const figraniumAuth = PieceAuth.CustomAuth({
   props: {
     baseUrl: Property.ShortText({
       displayName: 'Base URL',
-      description: 'Your Figranium server URL, e.g. http://localhost:11345',
+      description: 'Figranium Cloud URL or your self-hosted server URL',
       required: true,
-      defaultValue: 'http://localhost:11345',
+      defaultValue: 'https://cloud.figranium.dev',
     }),
     apiKey: PieceAuth.SecretText({
       displayName: 'API Key',
