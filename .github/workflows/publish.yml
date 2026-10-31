@@ -38,6 +38,8 @@ jobs:
 
       - name: Publish with provenance
         run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Tag and create v0.0.2 release
         if: github.ref == 'refs/heads/main'
